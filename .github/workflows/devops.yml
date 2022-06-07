@@ -18,7 +18,7 @@ jobs:
           node-version: '14.x'
       - run: npm install
       - run: npm install -g protractor 
-      - run: npm install -g webdriver-manager 
+      # - run: npm install -g webdriver-manager 
       - run: npm install -g @angular/cli
       - run: webdriver-manager update 
       - run: npm test
