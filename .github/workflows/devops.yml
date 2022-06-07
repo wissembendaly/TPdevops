@@ -19,8 +19,9 @@ jobs:
       - run: npm install
       - run: npm install -g protractor 
       # - run: npm install -g webdriver-manager 
-      - run: npm install -g @angular/cli
-      - run: webdriver-manager update 
+      # - run: npm install -g @angular/cli
+      # - run: webdriver-manager update 
+      - run: webdriver-manager start
       - run: npm test
   Build:
     runs-on: ubuntu-latest
