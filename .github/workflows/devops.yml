@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: '14.x'
       - run: npm install
-      - run: webdriver-manager start
-            - run:
+      # - run: webdriver-manager start
+      - run:
           name: Selenium Start
           background: true
           command: |
