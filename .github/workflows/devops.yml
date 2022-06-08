@@ -18,12 +18,8 @@ jobs:
           node-version: '14.x'
       - run: npm install
       # - run: webdriver-manager start
-      - run:
-          name: Selenium Start
-          background: true
-          command: |
-            ./node_modules/.bin/webdriver-manager update --versions.chrome=2.44
-            ./node_modules/.bin/webdriver-manager start --versions.chrome=2.44
+      - run: ./node_modules/.bin/webdriver-manager update --versions.chrome=2.44
+      - run: ./node_modules/.bin/webdriver-manager start --versions.chrome=2.44
       - run: npm start
       - run: npm test
 
