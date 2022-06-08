@@ -17,12 +17,16 @@ jobs:
         with:
           node-version: '14.x'
       - run: npm install
-      - run: npm install -g protractor 
-      # - run: npm install -g webdriver-manager 
-      # - run: npm install -g @angular/cli
-      # - run: webdriver-manager update 
       - run: webdriver-manager start
+            - run:
+          name: Selenium Start
+          background: true
+          command: |
+            ./node_modules/.bin/webdriver-manager update --versions.chrome=2.44
+            ./node_modules/.bin/webdriver-manager start --versions.chrome=2.44
+      - run: npm start
       - run: npm test
+
   Build:
     runs-on: ubuntu-latest
     needs:
