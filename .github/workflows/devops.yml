@@ -19,7 +19,9 @@ jobs:
       - run: npm install
       # - run: webdriver-manager start
       - run: ./node_modules/.bin/webdriver-manager update --versions.chrome=2.44
-      - run: ./node_modules/.bin/webdriver-manager start --versions.chrome=2.44
+      - run: 
+          command: ./node_modules/.bin/webdriver-manager start --versions.chrome=2.44
+          background : true
       - run: npm start
       - run: npm test
 
